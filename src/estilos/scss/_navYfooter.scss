@@ -1,0 +1,134 @@
+nav {
+  opacity: 1;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3.5rem;
+  @include desktop{
+    // margin-left: 3rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    color: $secundario;
+    margin-bottom: 0;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    text-decoration: none;
+    text-shadow: 3px 3px 10px $detalles
+  }
+
+  i {
+    // position: absolute;
+    // right: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+    color: $detalles;
+    font-size: 1rem;
+  }
+}
+nav {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 3.5rem;
+  background-color: $principal;
+  @include desktop{
+    padding-left: 6rem;
+  
+  }
+  .navbarContainer {
+    display: flex;
+    width: 100vw;
+    align-items: flex-end;
+    margin-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    top: 0;
+    border-bottom: 1px solid rgb(190, 190, 190);
+  }
+}
+.navMenu {
+  z-index: 10;
+  height: 3.5rem;
+  width: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  .textoNav{
+    // position: absolute;
+    font-size: .7rem;
+    margin: 0;
+    text-decoration: none;
+    text-transform: none;
+    font-style: normal;
+    font-weight: 200;
+    text-shadow: none;
+    color: $secundario;
+    @include desktop{
+      font-size: 1rem;
+      // &:hover{
+      //   color: $secundario;
+      // }
+    }
+  }
+  a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: $secundario;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    &:hover{
+      opacity: .7;
+    }
+  }
+}
+
+.botonera {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: $principal;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 15;
+  height: 3.5rem;
+  text-shadow: 3px 3px 10px $detalles;
+  border: none;
+  i {
+    font-size: 1.2rem;
+  }
+  @include desktop {
+    flex-direction: column;
+    top: 3.5rem;
+    height: 100%;
+    width: 10rem;
+  }
+}
+.active {
+  border: none;
+  i {
+    font-weight: bold;
+    color: $detalles;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px 10px grey;
+  }
+  .textoNav{
+    color: $detalles;
+  }
+}
+.violeta {
+  color: $detalles;
+}

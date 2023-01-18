@@ -1,0 +1,118 @@
+@import "_variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Edu+SA+Beginner";
+}
+body {
+  background: $principal;
+}
+#menu {
+  width: 100%;
+  margin-bottom: 5rem;
+  .cardMenu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: calc((100vh - 12rem) / 3);
+    border: 1rem solid $principal;
+
+    @include desktop {
+      border: none;
+      padding-left: 6rem;
+      height: calc((100vh - 8rem) / 3);
+    }
+    .boton {
+      position: absolute;
+      margin: auto;
+      bottom: -1rem;
+      text-decoration: none;
+      background-color: $detalles8;
+      border-radius: 1rem;
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      color: $secundario;
+      box-shadow: -5px -5px 10px $principal;
+      border: 1px outset $detalles;
+      font-size: 1rem;
+      font-weight: 300;
+      &:hover {
+        background-color: $detalles;
+      }
+    }
+    img {
+      height: calc((100vh - 18rem) / 3);
+      width: 100vw;
+      object-fit: cover;
+      border-radius: 4rem;
+      box-shadow: -1px -1px 10px -2px gray;
+      @include desktop {
+        width: 33vw;
+        height: calc((100vh - 12rem) / 3);
+      }
+    }
+  }
+}
+h4 {
+  color: $secundario;
+}
+// LOADER
+.contenido {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $principal;
+  padding-bottom: 5rem;
+  i {
+    position: absolute;
+    font-size: 2rem;
+    color: $detalles6;
+  }
+  @include desktop {
+    height: 100vh;
+    padding-bottom: 11rem;
+    padding-left: 6rem;
+  }
+}
+
+.spinner {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 5px solid $detalles6;
+  background: transparent;
+  border-top-color: $principal;
+  border-bottom-color: $principal;
+  border-right-color: $principal;
+  border-left-color: $detalles6;
+  animation: spin 4s linear infinite;
+  position: relative;
+}
+
+@keyframes spin {
+  0% {
+    background: transparent;
+    transform: rotate(720deg);
+  }
+}
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: $detalles6 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.imgBio {
+  border-radius: 50%;
+}
