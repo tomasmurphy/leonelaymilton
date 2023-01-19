@@ -608,6 +608,8 @@ i{
     color: $principal;
     font-weight: 500;
     padding-left: 1%;
+    padding-right: 1%;
+    
     padding-top: 1%;
     padding-bottom: 1%;
     border-radius: 1rem;
@@ -636,4 +638,29 @@ button{
 }
 .invitacion{
   color: $principal;
+}
+.botonMenu {
+  margin: 1rem;
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid $secundario;
+  opacity: 1;
+  background-color: $detalles;
+  color: $secundario;
+  transition: all 1s;
+  border-radius: 2rem;
+  align-self: center;
+  padding: 0;
+  font-size: .8rem;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.regalo{
+  border-radius: 15rem;
+margin: 0;
+padding: 0;
+  // border: .2rems solid $detalles;
+  width: 200px;
+  
 }

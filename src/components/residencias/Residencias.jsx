@@ -4,7 +4,6 @@ import Copiar from "../Copiar";
 import { useState } from "react";
 
 const Residencias = () => {
-  const [nombreCompleto, setNombre] = useState("");
   const [comprobante, setComprobante] = useState("");
   const [mensaje, setMensaje] = useState("");
 
@@ -13,14 +12,11 @@ const Residencias = () => {
     let celu = screen.width < 990 ? "api" : "web";
 
     event.preventDefault();
-    const whatsapp = `${nombreCompleto}: Felicitaciones Leonela y Milton 👩🏻‍❤️‍💋‍👨🏼!  Encontraran un regalito 🎁 con el nro ${comprobante} en su banco 🤑. ${mensaje} 🧡`;
+    const whatsapp = `Felicitaciones Leonela y Milton 👩🏻‍❤️‍💋‍👨🏼!  Encontraran un regalito 🎁 con el nro ${comprobante} en su banco 🤑. ${mensaje} 🧡`;
     let linkCompra = `https://${celu}.whatsapp.com/send?phone=5493468599123&text=${whatsapp}`;
     window.open(linkCompra, "_blank");
   };
 
-  const handleChangeName = (event) => {
-    setNombre(event.target.value);
-  };
   const handleChangeComprobante = (event) => {
     setComprobante(event.target.value);
   };
@@ -39,12 +35,14 @@ const Residencias = () => {
         <div className="row marMob ">
           <div className="col-12 col-lg-7 fondoImg text-md-start col-xl-9">
             <hr />
-            <h3 className="text-center fs-4">Queres hacernos un regalo?</h3>
+            <h3 className="text-center fs-4">Querés hacernos un regalo?</h3>
 
             <hr />
-            <p className="text-center fs-6">No tenemos lista pero si un CBU!</p>
+            <p className="text-center fs-6">Podés colaborar con nuestra luna de miel transfiriendo a mercado pago desde cualquier cuenta! </p>            
+            <p className="text-center fs-6"><img src="./img/regalo.png" className="regalo " alt="" /></p>
             <p className="text-center">
-              <Copiar copyText="44484848" />
+              Alias: boda.leonela.milton
+              <Copiar copyText="0000003100080103727019" />
             </p>
           </div>
           <div className="formu">
@@ -54,14 +52,7 @@ const Residencias = () => {
               action=""
               onSubmit={handleSubmit}
             >
-              <input
-                type="text"
-                required
-                placeholder="Nombre"
-                name="nombreCompleto"
-                value={nombreCompleto}
-                onChange={handleChangeName}
-              />
+    
               <input
                 type="number"
                 required

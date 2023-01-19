@@ -33,7 +33,7 @@ function Copiar({ copyText }) {
         <input type="text" className="boton formu text-center" value={copyText} readOnly />
         {/* Bind our handler function to the onClick button property */}
         <button className='boton'onClick={handleCopyClick}>
-          <span className="boton mx-2">{isCopied ? 'CBU copiado' : 'Copiar CBU'}</span>
+          <span className="boton mx-2">{isCopied ? 'CVU copiado' : 'Copiar CVU'}</span>
         </button>
       </div>
     );

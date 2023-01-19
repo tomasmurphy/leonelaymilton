@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 
-function Tarjeta() {
-    const [show, setShow] = useState(true);
+function Menu() {
+    const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
+    const handleShow = () => setShow(true);
 
     return (
         <>
-         
+         <button className='botonMenu'  onClick={handleShow}>
+                Ver menú
+            </button>
             <Modal
                 show={show}
                 onHide={handleClose}
@@ -20,11 +22,11 @@ function Tarjeta() {
             >
                 <Modal.Header closeButton>
                     <Modal.Title className="invitacion">
-                       <b>Invitacion</b> 
+                       <b>Menú</b> 
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <img src="./img/tarjeta.jpg" className="img-fluid" alt="" />
+                    <img src="./img/menu.jpg" className="img-fluid" alt="" />
                    
                 </Modal.Body>
             </Modal>
@@ -32,4 +34,4 @@ function Tarjeta() {
     );
 }
 
-export default Tarjeta;
+export default Menu;
