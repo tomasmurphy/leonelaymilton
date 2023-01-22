@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Copiar({ copyText }) {
+function Copiar({ copyText, tipo }) {
     const [isCopied, setIsCopied] = useState(false);
 
     // This is the function we wrote earlier
@@ -33,7 +33,7 @@ function Copiar({ copyText }) {
         <input type="text" className="boton formu text-center" value={copyText} readOnly />
         {/* Bind our handler function to the onClick button property */}
         <button className='boton'onClick={handleCopyClick}>
-          <span className="boton mx-2">{isCopied ? 'CVU copiado' : 'Copiar CVU'}</span>
+          <span className="boton mx-2">{isCopied ? `${tipo} copiado` : `Copiar ${tipo}`}</span>
         </button>
       </div>
     );

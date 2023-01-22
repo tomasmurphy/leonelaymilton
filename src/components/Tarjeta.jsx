@@ -17,15 +17,15 @@ function Tarjeta() {
                 keyboard={false}
                 size= "md"
                 centered
+                closeButton
             >
-                <Modal.Header closeButton>
-                    <Modal.Title className="invitacion">
-                       <b>Invitacion</b> 
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <img src="./img/tarjeta.jpg" className="img-fluid" alt="" />
-                   
+                
+                <Modal.Body onClick={handleClose}>
+                    <img  src="./img/tarjeta.jpg" className="img-fluid" alt="" />
+                    
+                    <p className="text-center mb-0"><button className='botonMenu'>
+                Voy!
+            </button></p>     
                 </Modal.Body>
             </Modal>
         </>

@@ -657,10 +657,17 @@ button{
   }
 }
 .regalo{
-  border-radius: 15rem;
+  border-radius: 50%;
 margin: 0;
-padding: 0;
-  // border: .2rems solid $detalles;
-  width: 200px;
-  
+  padding: 0;
+  width: 15rem;
+img{
+  border: 1rem solid $detalles;
+}  
+}
+.fiesta{
+  color: green;
+}
+.hotel{
+  color: purple;
 }

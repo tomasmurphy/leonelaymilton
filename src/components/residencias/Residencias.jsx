@@ -39,12 +39,12 @@ const Residencias = () => {
 
             <hr />
             <p className="text-center fs-6">Podés colaborar con nuestra luna de miel transfiriendo a mercado pago desde cualquier cuenta! </p>            
-            <p className="text-center fs-6"><img src="./img/regalo.png" className="regalo " alt="" /></p>
+            <div className="text-center mb-2"><img src="./img/regalo2.jpg" className="regalo " alt="" /></div>
             <p className="text-center">
               Alias: boda.leonela.milton
-              <Copiar copyText="0000003100080103727019" />
+              <Copiar copyText="0000003100080103727019" tipo="CVU" />
             </p>
-          </div>
+          
           <div className="formu">
             <form
               id="form"
@@ -72,7 +72,7 @@ const Residencias = () => {
               <button className="boton">Enviar</button>
             </form>
           </div>
-        </div>
+          </div>        </div>
       </section>
     </>
   );

@@ -2,9 +2,8 @@ import Nav from "../Nav";
 import Head from "../Head";
 import Copiar from "../Copiar";
 import { useState } from "react";
-import Menu from '../Menu'
+import Menu from "../Menu";
 const Proyectos = () => {
-
   const [nombreCompleto, setNombre] = useState("");
   const [comprobante, setComprobante] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -42,32 +41,36 @@ const Proyectos = () => {
         className="mb-5  animate__fadeInDown wow animate__animated animate__delay-0s animate__slower"
       >
         <div className="row marMob ">
-            <hr />
-            <h3 className="text-center fs-6">Quincho Club Atlético Corralense - 18 de febrero 21 hs</h3>
-            <hr />
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13341.501672675728!2d-62.186675737573246!3d-33.2828401773443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xff807a2de9af5f65!2sClub%20Atl%C3%A9tico%20Social%20Corralense!5e0!3m2!1ses-419!2sar!4v1674073705105!5m2!1ses-419!2sar"
-              width="400"
-              height="200"
-              allowfullscreen=""
-              title="mapa"
-              loading="lazy"
-              className="mb-4"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-
-            <hr />
-            <h3 className="text-center fs-6">Pagar tarjeta</h3>
-            <hr />
-            <p className="text-center fs-6">Costo por persona: $1 millon</p>
-            <Menu></Menu>
-            <p className="text-center">
-              <Copiar copyText="44484848" />
-            </p>
-          
           <hr />
-            <h3 className="text-center fs-6">Confirmar asistencia</h3>
-            <hr />
+          <h3 className="text-center fs-6">
+            Ubicaciones
+          </h3>
+          <hr />
+          <p><i className="bi bi-circle-fill fiesta"></i> Fiesta: Quincho Club Atlético Corralense - 18 de febrero 20:30 hs</p>
+          <p><i className="bi bi-circle-fill hotel"></i> Hotel Anacona tel: 3468 58-0900</p>
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1EuD2bEw5Uf3LTiZQkkAGYOiLKilyaIY&ehbc=2E312F"
+            width="640"
+            height="480"
+            title="Mapa"
+            className="mb-3"
+          ></iframe>
+          <hr />
+          <h3 className="text-center fs-6">Pagar tarjeta</h3>
+          <hr />
+          <p className="text-center fs-6">
+            Costo por persona: $7000
+            <Menu></Menu>
+          </p>
+
+          <p className="text-center">
+            Alias: TARJETA.LYM
+            <Copiar copyText="0170332840000032356146" tipo="CBU" />
+          </p>
+
+          <hr />
+          <h3 className="text-center fs-6">Confirmar asistencia</h3>
+          <hr />
           <div className="formu">
             <form
               id="form"
@@ -85,7 +88,7 @@ const Proyectos = () => {
               />
               <input
                 type="number"
-                placeholder="Indicar si hay algun vegetariano. Si no hay poner 0"
+                placeholder="Nro vegetarianos. Si no hay poner 0"
                 name="nota"
                 value={nota}
                 onChange={handleChangeNota}
