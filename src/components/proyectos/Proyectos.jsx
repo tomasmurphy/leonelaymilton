@@ -47,7 +47,7 @@ const Proyectos = () => {
           </h3>
           <hr />
           <p><i className="bi bi-circle-fill fiesta"></i> Fiesta: Quincho Club Atlético Corralense - 18 de febrero 20:30 hs</p>
-          <p><i className="bi bi-circle-fill hotel"></i> Hotel Anacona tel: 3468 58-0900</p>
+          <p><i className="bi bi-circle-fill hotel"></i> Hotel Ancona tel: 3468 58-0900</p>
           <iframe
             src="https://www.google.com/maps/d/embed?mid=1EuD2bEw5Uf3LTiZQkkAGYOiLKilyaIY&ehbc=2E312F"
             width="640"
@@ -58,11 +58,14 @@ const Proyectos = () => {
           <hr />
           <h3 className="text-center fs-6">Pagar tarjeta</h3>
           <hr />
+          <p className="text-center"> <Menu></Menu></p>
+         
           <p className="text-center fs-6">
-            Costo por persona: $7000
-            <Menu></Menu>
+            Costo por persona: $7000 / Menú infantil: $3500 <br />
+            Fecha límite para confirmar: 8 de febrero.
+            
+            
           </p>
-
           <p className="text-center">
             Alias: TARJETA.LYM
             <Copiar copyText="0170332840000032356146" tipo="CBU" />

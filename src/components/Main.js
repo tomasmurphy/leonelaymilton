@@ -22,7 +22,7 @@ import {Mudar} from './residencias/Mudar';
 const Main = () => {
 
     return (
-        <>
+        <div className='menuArriba'>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/informacion' element={<Proyectos />} />
@@ -43,7 +43,7 @@ const Main = () => {
                 <Route path='residencias/espacio_analogico' element={<EspacioAnalogico />} />
                 <Route path='residencias/ir_al_rio' element={<Rio />} />
             </Routes>
-        </>
+        </div>
     );
 };
 
