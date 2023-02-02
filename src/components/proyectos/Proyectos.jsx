@@ -14,7 +14,7 @@ const Proyectos = () => {
     let celu = screen.width < 990 ? "api" : "web";
 
     event.preventDefault();
-    const whatsapp = `Confirmamos la asistencia de 🧡 ${nombreCompleto} 🧡. ${nota} 🥗. Nro de transferencia 💸 ${comprobante}. Las canciones que no pueden faltar 🎶 ${mensaje}`;
+    const whatsapp = `Confirmamos la asistencia de 🧡 ${nombreCompleto} 🧡. ${notaArr} . Nro de transferencia 💸 ${comprobante}. Las canciones que no pueden faltar 🎶 ${mensaje}`;
     let linkCompra = `https://${celu}.whatsapp.com/send?phone=5493468599123&text=${whatsapp}`;
     window.open(linkCompra, "_blank");
   };
@@ -29,8 +29,11 @@ const Proyectos = () => {
     setMensaje(event.target.value);
   };
   const handleChangeNota = (event) => {
-    setNota(event.target.value);
+    
+    setNota(event.target.value)
+
   };
+  const notaArr = (nota < .9)?"":`${nota} 🥗`;
 
   return (
     <>
